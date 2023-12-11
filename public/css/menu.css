@@ -1,0 +1,204 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* Paleta de colores */
+:root {
+    --color-primario: #30343F;
+    --color-secundario: #FAFAFF;
+    --color-alerta: #FF3333;
+}
+
+
+/*para usarlos tienen que colocar por ejemplo, background-color: var(--color-secundario);*/
+
+
+
+header {
+    background-color:var(--color-primario);
+    padding: 20px 100px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a{
+    color: white;
+}
+
+
+.menu-item {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+/* logo */
+.logo img {
+    max-height: 100%;
+}
+
+/* principal */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    margin-right: 20px; 
+    position: relative; 
+}
+
+.menu-item a, .menu-objetos {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+
+ul.submenu a.menu-objetos {
+    width: 124px;
+    display: -webkit-inline-box;
+    font-size: 13px;
+    color: var(--color-alerta);
+}
+
+a.menu-objetos {
+    text-transform: uppercase;
+    padding: 18px;
+}
+
+/* submenu*/
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #30343f;
+    padding: 10px;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    box-shadow: -9px -8px 15px -4px rgba(0,0,0,0.29);
+    -webkit-box-shadow: -9px -8px 15px -4px rgba(0,0,0,0.29);
+    -moz-box-shadow: -9px -8px 15px -4px rgba(0,0,0,0.29);
+}
+
+.menu-item:hover .submenu {
+    display: block;
+
+}
+
+.submenu li {
+    margin: 5px 0;
+}
+
+.submenu a {
+    color: white;
+    text-decoration: none;
+
+}
+
+
+nav {
+    display: flex;
+}
+
+
+ul.menu {
+    width: 60%;
+    justify-content: flex-end;
+}
+
+
+.logo {
+    width: 50%;
+}
+
+/*carrito */
+.fa-shopping-cart {
+    color: white;
+    font-size: 20px;
+    margin-right: 5px; 
+}
+
+/*cantidad en el carrito */
+.cantidad {
+    color: white;
+}
+
+
+/*carrito*/
+
+li.carrito-icono {
+    position: relative;
+}
+
+
+span.cantidad {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background: var(--color-alerta);
+    padding: 2px 6px;
+    border-radius: 99em;
+    font-size: 11px;
+}
+
+
+/*footer*/
+
+footer {
+    color: white;
+    background: #30343F;
+    text-decoration: none !important;
+}
+
+
+footer li>a {
+    text-decoration: none;
+    color: white;
+}
+
+
+footer ul {
+    list-style: none;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer li>a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 100;
+    line-height: 35px;
+}
+
+
+footer .col-md-6 {
+    padding: 6em 3em 3em 3em;
+}
+
+footer img {
+    display: block;
+    margin-left: auto;
+}

@@ -1,0 +1,391 @@
+.container-fluid {
+    max-width: 1600px;
+    margin: auto;
+    padding: 2em;
+    overflow: hidden;
+}
+
+
+label.nombre-label {
+    display: block;
+    margin-top: 1em;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+input.buscador-completo {
+    width: 100% !important;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+
+input.numero-max {
+    width: 90% !important;
+    padding: 3px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    display: block;
+    margin-right: 0;
+}
+
+.row.en-medio {
+    align-items: center;
+    text-transform: uppercase;
+}
+
+
+.selectores-tienda input[type="checkbox"] {
+    display: none;
+}
+
+.selectores-tienda label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+.selectores-tienda> label {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.selectores-tienda input[type="checkbox"]:checked + label::before {
+    background-color: #ff3333;
+    border-color: #ff3333;
+}
+
+.selectores-tienda label {
+    vertical-align: middle;
+}
+
+
+.selectores-tienda + .selectores-tienda {
+    margin-top: 10px;
+}
+
+
+select#ordenar {
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 6px;
+    text-transform: uppercase;
+}
+
+
+
+/*Productos*/
+
+a.productos-link {
+    text-decoration: none;
+    color: black;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+a.productos-link {
+    text-decoration: none;
+    color: black;
+    line-height: normal;
+    text-transform: uppercase;
+    position: relative;
+}
+
+
+
+.banner-superior {
+    position: absolute;
+    right: 0;
+    color: white;
+    background: #FF3333;
+    padding: 4px 15px;
+}
+
+
+a.productos-link>img {
+    width: 100%;
+}
+
+
+p.categoria {
+    font-size: 12px;
+}
+
+p.titulo-producto {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+p.cuotas {
+    font-size: 12px;
+    color: #1D8CC6;
+    font-weight: 700;
+}
+
+
+
+
+/*paginacion*/
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+    margin: 35px auto;
+}
+.pagination-item {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #C8CFD5;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pagination-item.icon {
+    background-color: #C8CFD5;
+    color: white;
+    border: none;
+}
+
+.left-icon, .right-icon {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.number {
+    background-color: white;
+    color: black;
+    border: 1px solid #C8CFD5;
+}
+
+.ellipsis {
+    border: none;
+    background-color: transparent;
+    cursor: default;
+    pointer-events: none;
+}
+
+.icon:hover {
+    background-color: #C8CFD5;
+    color: white;
+}
+
+
+.pagination-item {
+    border-radius: 5px;
+    margin: 0 3px;
+}
+
+
+span.pagination-item.number.activo {
+    border-color: var(--color-alerta);
+    color: var(--color-alerta);
+}
+
+
+/*Producto*/
+
+
+p.categoria-producto {
+    font-weight: 700;
+}
+
+
+h1.titulo-producto {
+    font-weight: 700;
+}
+
+p.texto-producto {
+    font-size: 20px;
+}
+
+
+p.precio-producto {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+
+.col-md-5.formulario-subir-bajar {
+    display: flex;
+}
+
+
+input.cantidad-producto {
+    font-size: 20px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.cositos-de-sumar {
+    width: 20px;
+    text-align: center;
+}
+
+
+.formulario-subir-bajar {
+    display: flex;
+    align-items: center;
+}
+
+
+.subir-bajar {
+    color: white;
+    background: #4f4f4f;
+    margin-top: 2px;
+    height: 20px;
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+
+.centro-flex {
+    align-items: center;
+}
+
+
+button.enviar-compra {
+    height: 100%;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background: red;
+    border: none;
+}
+
+
+i.fas.fa-arrow-right, i.fas.fa-arrow-left {
+    color: black;
+}
+
+
+
+/*carrito*/
+
+
+a.productos-link.detalles-carritos>p.precio-producto {
+    font-size: 12px;
+}
+
+
+a.productos-link.detalles-carritos>p {
+    margin: 4px;
+}
+
+.row.tabla-color {
+    background: #FAFAFF;
+    margin-bottom: 1em;
+    padding: 10px;
+    border-radius: 5px !important;
+    -moz-box-shadow: 10px 10px 39px -8px rgba(0,0,0,0.21);
+    box-shadow: 10px 10px 18px -12px rgba(0,0,0,0.63);
+    -webkit-box-shadow: 10px 10px 18px -12px rgba(0,0,0,0.63);
+    -moz-box-shadow: 10px 10px 18px -12px rgba(0,0,0,0.63);
+}
+
+
+p.titulo-tabla {
+    margin: 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+
+.titulo-carrito {
+    text-transform: uppercase;
+    font-size: 29px;
+    margin-bottom: 1em;
+    width: max-content;
+    border-bottom: solid 4px red;
+    padding: 6px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+button.btn.alerta-boton {
+    font-size: 20px;
+    color: red;
+    border-radius: 99em;
+    border: red 2px solid;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    padding: 0;
+    line-height: 23px;
+}
+
+
+.subir-bajar {
+      cursor: pointer;
+     
+    }
+
+.subir-bajar.carrito-subir {
+    background: red;
+}
+
+.totales {
+    font-size: 18px;
+}
+
+
+h3.totales {
+    font-weight: 800;
+}
+
+
+.row.tabla-color input.cantidad-producto {
+    width: auto;
+    font-weight: 800;
+}
+
+p.totales {
+    text-align: right;
+    color: #939393;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+h3.total {
+    font-weight: 800;
+    font-size: 24px;
+}
+
+.margin-centro {
+    margin: auto;
+    display: flex;
+}
+
+h3.text-right.titulo-carrito {
+    text-align: right;
+    margin-left: auto;
+    margin-top: 25px;
+}
+
+button.enviar-compra>a {
+    text-decoration: none;
+    color: white;
+}

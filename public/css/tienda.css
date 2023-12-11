@@ -1,0 +1,248 @@
+/*tienda*/
+
+section#catalogo {
+    padding: 4em;
+}
+
+
+/*filtros*/
+
+form.formulario {
+    padding: 0 30px 0 0;
+}
+
+
+.filtro-item > label  {
+    text-transform: uppercase;
+    font-size: 19px;
+}
+
+
+.titulos-filtros {
+    margin: 19px 0 3px 0;
+    font-weight: bold;
+}
+
+
+.formulario-objetos {
+    font-size: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 2% 5%;
+    width: 90%;
+    border: solid 2px black;
+}
+
+select#ordenar {
+    width: 100%;
+}
+
+.filtro-item.maximo-minimo {
+    display: flex;
+    width: 100% !important;
+    overflow: hidden;
+}
+
+
+
+.label-max-min {
+    margin-right: 10px; 
+}
+
+label.label-max-min {
+    font-size: 12px;
+}
+
+.precio-total {
+    width: 40px; 
+}
+
+
+.filtro-item.maximo-minimo {
+    clear: both;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+.precio-total {
+    padding: 2px 4px;
+    border-radius: 5px;
+    border: solid 2px black;
+}
+
+
+
+label.filtro-titulo {
+    margin: 15px 0 10px;
+    clear: both;
+    display: block;
+    font-weight: 900;
+}
+
+
+
+.selectores-tienda input[type="checkbox"] {
+    display: none;
+}
+
+.selectores-tienda label::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+.selectores-tienda> label {
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.selectores-tienda input[type="checkbox"]:checked + label::before {
+    background-color: #ff3333;
+    border-color: #ff3333;
+}
+
+.selectores-tienda label {
+    vertical-align: middle;
+}
+
+
+.selectores-tienda + .selectores-tienda {
+    margin-top: 10px;
+}
+
+/*productos*/
+
+article#productos {
+    display: flex;
+    flex-flow: wrap;
+}
+
+
+.producto {
+    overflow: hidden;
+    position: relative;
+}
+
+
+.producto.col-4 img {
+    width: 100%;
+}
+
+
+.banner-superior {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    background:var(--color-alerta);
+    padding: 5px 11px;
+}
+
+
+.producto.col-4 {
+    padding: 1%;
+    width: 31%;
+    margin-bottom: 18px;
+}
+
+p.categoria {
+    text-transform: uppercase;
+    color: black;
+    font-size: 14px;
+    margin: 5px 0 10px;
+}
+
+p.titulo-producto {
+    text-transform: uppercase;
+    font-weight: 900;
+    color: black;
+    margin: 10px 0;
+}
+
+p.precio-producto {
+    color: black;
+    margin: 10px 0;
+}
+
+
+p.cuotas {
+    color: #1D84B5;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+
+/*paginacion*/
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clear: both;
+    margin: 35px auto;
+}
+.pagination-item {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #C8CFD5;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pagination-item.icon {
+    background-color: #C8CFD5;
+    color: white;
+    border: none;
+}
+
+.left-icon, .right-icon {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.number {
+    background-color: white;
+    color: black;
+    border: 1px solid #C8CFD5;
+}
+
+.ellipsis {
+    border: none;
+    background-color: transparent;
+    cursor: default;
+    pointer-events: none;
+}
+
+.icon:hover {
+    background-color: #C8CFD5;
+    color: white;
+}
+
+
+.pagination-item {
+    border-radius: 5px;
+    margin: 0 3px;
+}
+
+
+span.pagination-item.number.activo {
+    border-color: var(--color-alerta);
+    color: var(--color-alerta);
+}

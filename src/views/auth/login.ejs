@@ -1,0 +1,66 @@
+<!-- src/views/auth/login.ejs -->
+
+<%- include('../partials/header.ejs') %>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <h2 class="titulo-admin">Ingresar a mi cuenta</h2>
+
+        <form method="post" action="/auth/login">
+          <div class="row">
+            <div class="col-md-4">
+              <label for="email" class="nombre-form">Email:</label>
+            </div>
+            <div class="col-md-8">
+              <input type="email" id="email" name="email" required placeholder="ejemplo@gmail.com" class="campo-form">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+              <label for="password" class="nombre-form">Contraseña:</label>
+            </div>
+            <div class="col-md-8">
+              <input type="password" id="password" name="password" required placeholder="••••••••" class="campo-form" minlength="3" maxlength="20">
+            </div>
+          </div>
+
+          <div class="boton-y-terminos">
+            <button type="submit" class="botton-ingreso">Ingresar </button>
+            <input type="checkbox" name="aceptar" required>Recordarme
+          </div>
+
+          <p><a href="#">Olvide mi contraseña</a> | <a href="register">Registrarme</a></p>
+
+      </form>
+
+        <% if (typeof error !== 'undefined' && error) { %>
+          <p style="color: red;"><%= error %></p>
+        <% } %>
+
+
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+</div>
+
+
+
+  
+
+
+  
+    
+    
+
+    
+    
+
+
+<%- include('../partials/footer.ejs') %>

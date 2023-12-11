@@ -1,0 +1,78 @@
+<!-- src/views/admin/dashboard.ejs -->
+
+<%- include('../partials/header.ejs') %>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10">
+
+ <!-- Formulario de búsqueda -->
+      <!-- Formulario de búsqueda -->
+        <form action="/admin/dashboard" method="post" class="busqueda-form">
+          <label for="termino">Buscar:</label>
+          <input type="text" name="termino" id="termino" required>
+          <button type="submit">Buscar</button>
+        </form>
+
+        <!-- Botón para limpiar la búsqueda -->
+        <a href="/admin/dashboard" class="limpiar-busqueda">Limpiar búsqueda</a>
+
+
+      <h2 class="titulo-admin" >Panel de Administración - Productos</h2>
+      <a href="/admin/createProduct" class="boton">Crear Producto Nuevo <img src="/img/icons/more_icon.svg" alt=""></a>
+
+
+
+
+  <table border="1" style="width: 100%;border: none;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Código</th>
+        <th>Nombre del Producto</th>
+        <th>Categoría</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+    <% productos.forEach((producto) => { %>
+      <tr>
+        <td><%= producto.product_id %></td>
+        <td><%= producto.sku %></td>
+        <td><%= producto.product_name %></td>
+        <td><%= producto.category_name %> | <%= producto.licence_name %></td>
+        <td><a href="/admin/editProduct/<%= producto.product_id %>"><img src="/img/icons/edit_pencil.svg" alt="pencil"></a></td>
+        <td>
+          <form method="post" action="/admin/deleteProduct/<%= producto.product_id %>" onsubmit="return confirm('¿Estás seguro de que quieres borrar este producto?');">
+            <button type="submit"><img src="/img/icons/delete_trash.svg" alt=""></button>
+          </form>
+        </td>
+      </tr>
+    <% }); %>
+  </tbody>
+  </table>
+
+
+
+
+
+
+
+
+
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+</div>
+
+
+  
+
+
+
+
+
+<%- include('../partials/footer.ejs') %>

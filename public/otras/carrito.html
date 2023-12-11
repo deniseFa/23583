@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- Boostrap--> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Style-iara.css">
+</head>
+<body>
+   <header>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/branding/logo_light_horizontal.svg" alt="Logo" />
+            </a>
+        </div>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="shop.html" class="menu-objetos">Shop</a>
+                <ul class="submenu">
+                    <li><a href="#" class="menu-objetos">Item 1</a></li>
+                    <li><a href="#" class="menu-objetos">Item 2</a></li>
+                    <li><a href="#" class="menu-objetos">Item 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="menu-objetos">Contacto</a></li>
+            <li><a href="#" class="menu-objetos">Login</a></li>
+            <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h1 class="titulo-carrito">
+                    CARRITO DE COMPRAS
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row tabla-color">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="titulo-tabla">DETALLE DE PRODUCTO</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="titulo-tabla">CANTIDAD</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="titulo-tabla">TOTAL</p>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row tabla-color">
+        <div class="col-md-12">
+            <div class="row centro-flex">
+                <div class="col-md-6">
+                    <div class="row centro-flex">
+                        <div class="col-md-3">
+                            <a href="item.html" class="productos-link">
+                                <img src="img/star-wars/baby-yoda-1.webp" alt="trooper-1.webp">
+                            </a>
+
+                        </div>
+                        <div class="col-md-9">
+                            
+                            <a href="item.html" class="productos-link detalles-carritos"> 
+                                <p class="titulo-producto">Stormtrooper lightsaber</p>
+                                <p class="categoria">Star Wars</p>
+                                <p class="precio-producto">Precio unitario: $ 1799,99</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row centro-flex">
+                            <div class="col-md-12 formulario-subir-bajar">
+                                <div class="margin-centro">
+                                <input class="cantidad-producto" type="number" min="1" max="50" placeholder="1" value="2">
+                                <div class="cositos-de-sumar">
+                                  <div class="subir-bajar carrito-subir" onclick="sumar(this)">+</div>
+                                  <div class="subir-bajar carrito-subir" onclick="restar(this)">-</div>
+                                </div>
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-1">
+                     
+                    <button type="button" class="btn  alerta-boton">
+                        x
+                    </button>
+                </div>
+            </div>
+        </div>    
+    </div>
+        <div class="row tabla-color">
+        <div class="col-md-12">
+            <div class="row centro-flex">
+                <div class="col-md-6">
+                    <div class="row centro-flex">
+                        <div class="col-md-3">
+                            <a href="item.html" class="productos-link">
+                                <img src="img/pokemon/pidgeotto-1.webp" alt="trooper-1.webp">
+                            </a>
+
+                        </div>
+                        <div class="col-md-9">
+                            
+                            <a href="item.html" class="productos-link detalles-carritos"> 
+                                <p class="titulo-producto">PIDGEOTTO</p>
+                                <p class="categoria">POKEMON</p>
+                                <p class="precio-producto">Precio unitario: $ 1799,99</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row centro-flex">
+                            <div class="col-md-12 formulario-subir-bajar">
+                                <div class="margin-centro">
+                                <input class="cantidad-producto" type="number" min="1" max="50" placeholder="1" value="1">
+                                <div class="cositos-de-sumar">
+                                  <div class="subir-bajar carrito-subir" onclick="sumar(this)">+</div>
+                                  <div class="subir-bajar carrito-subir" onclick="restar(this)">-</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-1">
+                     
+                    <button type="button" class="btn alerta-boton">
+                        x
+                    </button>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+            <h3 class="text-right titulo-carrito">
+               Resumen
+            </h3>
+            <div class="row tabla-color">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3 class="totales">
+                                CANTIDAD DE ELEMENTOS
+                            </h3>
+                        </div>
+                        <div class="col-md-3 text-derecha">
+                            <p class="totales">3</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3 class="totales">
+                               SUBTOTAL
+                            </h3>
+                        </div>
+                        <div class="col-md-3 text-derecha">
+                            <p class="totales">$ 5.399,97</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3 class="totales">
+                               ENVIO
+                            </h3>
+                        </div>
+                        <div class="col-md-3 text-derecha">
+                            <p class="totales">$0,00</p>
+                        </div>
+                    </div>
+                    <hr class="separador-totales">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3 class="total">
+                                TOTAL
+                            </h3>
+                        </div>
+                        <div class="col-md-3 text-derecha">
+                            <p class="totales">$ 5.399,97</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ <footer>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#">Ingresar</a></li>
+                        <li><a href="./pages/contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/branding/isotype.svg" alt="Pie de página">
+                </div>
+            </div>
+            <p>Todos los derechos reservados 2023 - Funkoshop  &copy;</p>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="js/sumar-restar.js"></script>
+
+</body>
+</html>
+	

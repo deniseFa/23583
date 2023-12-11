@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- Boostrap--> 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Estilos propios-->
+
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Style-iara.css">
+
+
+    <!--slider-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"> 
+</head>
+<body>
+   <header>
+    <nav>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/branding/logo_light_horizontal.svg" alt="Logo" />
+            </a>
+        </div>
+        <ul class="menu">
+            <li class="menu-item">
+                <a href="shop.html" class="menu-objetos">Shop</a>
+                <ul class="submenu">
+                    <li><a href="#" class="menu-objetos">Item 1</a></li>
+                    <li><a href="#" class="menu-objetos">Item 2</a></li>
+                    <li><a href="#" class="menu-objetos">Item 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="menu-objetos">Contacto</a></li>
+            <li><a href="#" class="menu-objetos">Login</a></li>
+            <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container-fluid">
+    <div class="row centro-flex">
+        <div class="col-md-6">
+            <img src="img/star-wars/baby-yoda-1.webp" alt="trooper-1.webp">
+        </div>
+        <div class="col-md-6">
+
+                <p class="categoria-producto">STAR WARS</p>
+                <h1 class="titulo-producto">BABY YODA BLUEBALL</h1>
+                <p class="texto-producto">Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.</p>
+                <p class="precio-producto">$ 1799,99</p>
+
+            <div class="row centro-flex">
+                <form action="">
+                    <div class="col-md-8">
+                        <div class="row centro-flex">
+                         <div class="col-md-6 formulario-subir-bajar">
+                            <input class="cantidad-producto" type="number" min="1" max="50" placeholder="1">
+                            <div class="cositos-de-sumar">
+                              <div class="subir-bajar" onclick="sumar(this)">+</div>
+                              <div class="subir-bajar" onclick="restar(this)">-</div>
+                            </div>
+                          </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="enviar-compra"><a href="carrito.html">Agregar al carrito</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+     
+            </div>
+
+        </div>
+    </div>
+
+
+  <div class="glide">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        <!-- Repite -->
+        <li class="glide__slide">
+          <a href="item.html" class="productos-link">
+            <div class="banner-superior">Nuevo</div>
+            <img src="img/star-wars/trooper-1.webp" alt="trooper-1.webp">
+            <p class="categoria">STAR WARS</p>
+            <p class="titulo-producto">STORMTROOPER LIGHTSABER</p>
+            <p class="precio-producto">$ 1799,99</p>
+            <p class="cuotas">3 cuotas sin interés</p>
+          </a>
+        </li>
+
+        <li class="glide__slide">
+          <a href="item.html" class="productos-link">
+            <div class="banner-superior">Nuevo</div>
+            <img src="img/pokemon/pidgeotto-1.webp" alt="pidgeotto-1.webp">
+            <p class="categoria">POKEMON</p>
+            <p class="titulo-producto">PIDGEOTTO</p>
+            <p class="precio-producto">$ 1799,99</p>
+            <p class="cuotas">3 cuotas sin interés</p>
+          </a>
+        </li>
+
+        <li class="glide__slide">
+          <a href="item.html" class="productos-link">
+            <div class="banner-superior">Nuevo</div>
+            <img src="img/harry-potter/luna-1.webp" alt="trooper-1.webp">
+            <p class="categoria">HARRY POTTER</p>
+            <p class="titulo-producto">LUNA LOVEGOOD LION MASK</p>
+            <p class="precio-producto">$ 1799,99</p>
+            <p class="cuotas">3 cuotas sin interés</p>
+          </a>
+        </li>
+
+        <!-- Fin de la repetición -->
+      </ul>
+    </div>
+
+    <!-- flechas -->
+    <div class="glide__arrows" data-glide-el="controls">
+      <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+        <i class="fas fa-arrow-left"></i> 
+      </button>
+      <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+        <i class="fas fa-arrow-right"></i> 
+      </button>
+    </div>
+
+    <!-- Configuración de Glide.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="https://unpkg.com/@glidejs/glide@3.6.0/dist/glide.js"></script>
+    <script>
+      new Glide('.glide', {
+        type: 'carousel',    // Tipo de movimiento
+        startAt: 0,          // Comienza desde el primer slide
+        perView: 3,          // Muestra 3 slides a la vez
+        focusAt: 'center',   // Centra el slide activo
+        gap: 10,             // Espacio entre los slides
+        autoplay: false,     // Desactiva la reproducción automática
+        hoverpause: true,    // Pausa la reproducción automática al pasar el ratón
+        keyboard: true,      // Permite cambiar los slides con las flechas del teclado
+        bound: false,        // No limita la cantidad de slides cuando se utiliza type: 'carousel'
+        swipeThreshold: 80,  // Distancia mínima de desplazamiento para cambiar el slide
+        dragThreshold: 120,  // Distancia mínima de arrastre para cambiar el slide
+        perTouch: 3,         // Mueve hasta 3 slides por toque/swipe
+        touchRatio: 0.5,     // Proporción de movimiento entre swipe y drag
+        touchAngle: 45,      // Ángulo requerido para activar el movimiento de los slides
+        animationDuration: 400,  // Duración de la animación
+        rewind: true,        // Permite el rebobinado al llegar al primer o último slide
+        rewindDuration: 800, // Duración de la animación de rebobinado
+        animationTimingFunc: 'cubic-bezier(0.165, 0.840, 0.440, 1.000)'  // Función de temporización de la animación
+      }).mount();
+    </script>
+  </div>
+
+
+
+
+</div>
+
+
+ <footer>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#">Ingresar</a></li>
+                        <li><a href="./pages/contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="img/branding/isotype.svg" alt="Pie de página">
+                </div>
+            </div>
+            <p>Todos los derechos reservados 2023 - Funkoshop  &copy;</p>
+        </div>
+    </div>
+</footer>
+
+
+<script type="text/javascript" src="js/sumar-restar.js"></script>
+
+
+</body>
+</html>

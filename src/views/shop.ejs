@@ -1,0 +1,115 @@
+<%- include('partials/headerFront.ejs') %>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3">
+			<form action="">
+				<div class="row">
+					<div class="col-md-12">
+						<label for="nombreProducto" class="nombre-label">BUSCAR</label>
+						<input type="text" name="nombreProducto" minlength="5" required class="buscador-completo">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="nombreProducto" class="nombre-label">Ordenar Por</label>
+						 <select id="ordenar" name="ordenar" class="col-12 formulario-objetos buscador-completo" >
+			                <option value="mayor-menor">De mayor a menor</option>
+			                <option value="menor-mayor">De menor a mayor</option>
+			                <option value="mas-nuevo">Más nuevo</option>
+			            </select>
+					</div>
+				</div>
+				<div class="row">
+					<label for="nombreProducto" class="nombre-label">PRECIO</label>
+					<div class="col-md-6">
+						<div class="row en-medio">
+							<div class="col-md-2">
+								<label for="nombreProducto" class="nombre-label-max-min">Min:</label>
+							</div>
+							<div class="col-md-10">
+								<input type="number" name="minimo" minlength="5" required class="numero-max" min="0">
+							</div>
+						</div>
+						
+						
+					</div>
+					<div class="col-md-6">
+						<div class="row en-medio">
+							<div class="col-md-2">
+								<label for="nombreProducto" class="nombre-label-max-min">Max:</label>
+							</div>
+							<div class="col-md-10">
+									<input type="number" name="maximo" minlength="5" required class="numero-max" max="50">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="nombreProducto" class="nombre-label">FILTRAR</label>
+						<div class="filtro-item">
+						   <div class="selectores-tienda">
+						      <input type="checkbox" id="nuevo" name="nuevo">
+						      <label for="nuevo">Nuevo</label>
+						   </div>
+						   <div class="selectores-tienda">
+						      <input type="checkbox" id="ofertas" name="ofertas">
+						      <label for="ofertas">Ofertas</label>
+						   </div>
+						   <div class="selectores-tienda">
+						      <input type="checkbox" id="edicion-especial" name="edicion-especial">
+						      <label for="edicion-especial">Edición Especial</label>
+						   </div>
+						   <div class="selectores-tienda">
+						      <input type="checkbox" id="favoritos" name="favoritos">
+						      <label for="favoritos">Favoritos</label>
+						   </div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-md-9">
+			<div class="row">
+				    <% productos.forEach((producto) => { %>
+				      <div class="col-md-4">
+				        <a href="item" class="productos-link">
+				          <% if (producto.discount) { %>
+				            <div class="banner-superior">Nuevo</div>
+				          <% } %>
+				          <img src="img/<%= producto.image_front %>" alt="<%= producto.sku %>">
+				          <p class="categoria"><%= producto.category_name %></p>
+				          <p class="titulo-producto"><%= producto.product_name %></p>
+				          <p class="precio-producto">$ <%= typeof producto.price === 'number' ? producto.price.toFixed(2) : producto.price %></p>
+
+				          <% if (producto.dues) { %>
+				            <p class="cuotas"><%= producto.dues %> cuotas sin interés</p>
+				          <% } %>
+				        </a>
+				      </div>
+				    <% }); %>
+
+
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div id="pagination">
+					    <span class="pagination-item icon left-icon"><i class="fas fa-chevron-left"></i></span>
+					    <span class="pagination-item number activo">1</span>
+					    <span class="pagination-item number">2</span>
+					    <span class="pagination-item number">...</span>
+					    <span class="pagination-item number">9</span>
+					    <span class="pagination-item number">10</span>
+					    <span class="pagination-item icon right-icon"><i class="fas fa-chevron-right"></i></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<%- include('partials/footer.ejs') %>

@@ -1,0 +1,78 @@
+<%- include('../partials/header.ejs') %>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
+    <div class="col-md-6">
+        <h2 class="titulo-admin">CREA TU CUENTA</h2>
+        <h3 class="sub-titulo-admin">Completa el formulario para ser parte del mundo de los Funkos</h3>
+
+
+  <% if (typeof error !== 'undefined' && error) { %>
+    <p style="color: red;"><%= error %></p>
+  <% } %>
+
+  <form method="post" action="/auth/register">
+
+
+          <div class="row">
+            <div class="col-md-4">
+                <label class="nombre-form" for="name">Nombre:</label>
+            </div>
+            <div class="col-md-8">
+                <input class="campo-form" type="text" id="name" name="name" placeholder="Laura"  required minlength="3" maxlength="50">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+                <label class="nombre-form" for="lastname">Apellido:</label>
+            </div>
+            <div class="col-md-8">
+                <input class="campo-form" type="text" id="lastname" name="lastname" placeholder="Torres"  required minlength="3" maxlength="50"> 
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4">
+                <label class="nombre-form" for="email">Correo electrónico:</label>
+            </div>
+            <div class="col-md-8">
+                <input class="campo-form" type="email" id="email" name="email" placeholder="laura@email.com"  required minlength="3" maxlength="50">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+                <label class="nombre-form" for="password">Contraseña:</label>
+            </div>
+            <div class="col-md-8">
+                <input class="campo-form" type="password" id="password" name="password" placeholder="••••••••"  required minlength="3" maxlength="20">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+               <label class="nombre-form" for="confirmPassword">Repetir Contraseña:</label>
+            </div>
+            <div class="col-md-8">
+               <input class="campo-form" type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••"  required minlength="3" maxlength="20">
+            </div>
+          </div>
+          <div class="boton-y-terminos">
+           <button type="submit" class="botton-ingreso">Registrarse</button>
+           <input type="checkbox" name="aceptar"  required>Recordarme
+         </div>
+  </form>
+
+
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+
+
+
+
+<%- include('../partials/footer.ejs') %>
+

@@ -1,0 +1,66 @@
+/* columnas */
+.col-1 {
+  width: 8.33333%; /* 1/12 */
+  float: left;
+}
+
+.col-2 {
+  width: 16.66667%; /* 2/12 */
+  float: left;
+}
+
+.col-3 {
+  width: 25%; /* 3/12 */
+  float: left;
+}
+
+.col-4 {
+  width: 33.33333%; /* 4/12 */
+  float: left;
+}
+
+.col-5 {
+  width: 41.66667%; /* 5/12 */
+  float: left;
+}
+
+.col-6 {
+  width: 50%; /* 6/12 */
+  float: left;
+}
+
+.col-7 {
+  width: 58.33333%; /* 7/12 */
+  float: left;
+}
+
+.col-8 {
+  width: 66.66667%; /* 8/12 */
+  float: left;
+}
+
+.col-9 {
+  width: 75%; /* 9/12 */
+  float: left;
+}
+
+.col-10 {
+  width: 83.33333%; /* 10/12 */
+  float: left;
+}
+
+.col-11 {
+  width: 91.66667%; /* 11/12 */
+  float: left;
+}
+
+.col-12 {
+  width: 100%; /* 12/12 */
+  float: left;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}

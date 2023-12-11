@@ -1,0 +1,179 @@
+<%- include('partials/headerFront.ejs') %>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h1 class="titulo-carrito">
+                    CARRITO DE COMPRAS
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="row tabla-color">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="titulo-tabla">DETALLE DE PRODUCTO</p>
+                </div>
+                <div class="col-md-3">
+                    <p class="titulo-tabla">CANTIDAD</p>
+                </div>
+                <div class="col-md-2">
+                    <p class="titulo-tabla">TOTAL</p>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row tabla-color">
+        <div class="col-md-12">
+            <div class="row centro-flex">
+                <div class="col-md-6">
+                    <div class="row centro-flex">
+                        <div class="col-md-3">
+                            <a href="item.html" class="productos-link">
+                                <img src="img/star-wars/baby-yoda-1.webp" alt="trooper-1.webp">
+                            </a>
+
+                        </div>
+                        <div class="col-md-9">
+                            
+                            <a href="item.html" class="productos-link detalles-carritos"> 
+                                <p class="titulo-producto">Stormtrooper lightsaber</p>
+                                <p class="categoria">Star Wars</p>
+                                <p class="precio-producto">Precio unitario: $ 1799,99</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row centro-flex">
+                            <div class="col-md-12 formulario-subir-bajar">
+                                <div class="margin-centro">
+                                <input class="cantidad-producto" type="number" min="1" max="50" placeholder="1" value="2">
+                                <div class="cositos-de-sumar">
+                                  <div class="subir-bajar carrito-subir" onclick="sumar(this)">+</div>
+                                  <div class="subir-bajar carrito-subir" onclick="restar(this)">-</div>
+                                </div>
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-1">
+                     
+                    <button type="button" class="btn  alerta-boton">
+                        x
+                    </button>
+                </div>
+            </div>
+        </div>    
+    </div>
+        <div class="row tabla-color">
+        <div class="col-md-12">
+            <div class="row centro-flex">
+                <div class="col-md-6">
+                    <div class="row centro-flex">
+                        <div class="col-md-3">
+                            <a href="item.html" class="productos-link">
+                                <img src="img/pokemon/pidgeotto-1.webp" alt="trooper-1.webp">
+                            </a>
+
+                        </div>
+                        <div class="col-md-9">
+                            
+                            <a href="item.html" class="productos-link detalles-carritos"> 
+                                <p class="titulo-producto">PIDGEOTTO</p>
+                                <p class="categoria">POKEMON</p>
+                                <p class="precio-producto">Precio unitario: $ 1799,99</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row centro-flex">
+                            <div class="col-md-12 formulario-subir-bajar">
+                                <div class="margin-centro">
+                                <input class="cantidad-producto" type="number" min="1" max="50" placeholder="1" value="1">
+                                <div class="cositos-de-sumar">
+                                  <div class="subir-bajar carrito-subir" onclick="sumar(this)">+</div>
+                                  <div class="subir-bajar carrito-subir" onclick="restar(this)">-</div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-1">
+                     
+                    <button type="button" class="btn alerta-boton">
+                        x
+                    </button>
+                </div>
+            </div>
+        </div>    
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6">
+            <h3 class="text-right titulo-carrito">
+               Resumen
+            </h3>
+            <div class="row tabla-color">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3 class="totales">
+                                CANTIDAD DE ELEMENTOS
+                            </h3>
+                        </div>
+                        <div class="col-md-3 text-derecha">
+                            <p class="totales">3</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3 class="totales">
+                               SUBTOTAL
+                            </h3>
+                        </div>
+                        <div class="col-md-3 text-derecha">
+                            <p class="totales">$ 5.399,97</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3 class="totales">
+                               ENVIO
+                            </h3>
+                        </div>
+                        <div class="col-md-3 text-derecha">
+                            <p class="totales">$0,00</p>
+                        </div>
+                    </div>
+                    <hr class="separador-totales">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h3 class="total">
+                                TOTAL
+                            </h3>
+                        </div>
+                        <div class="col-md-3 text-derecha">
+                            <p class="totales">$ 5.399,97</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include('partials/footer.ejs') %>

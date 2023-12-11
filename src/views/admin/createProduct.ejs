@@ -1,0 +1,101 @@
+<!-- src/views/admin/dashboard.ejs -->
+<%- include('../partials/header.ejs') %>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-8">
+
+  <h2>Crear un nuevo Item</h2>
+
+
+  <!-- Formulario para crear un nuevo producto -->
+  <form action="/admin/createProduct" method="post">
+  <div class="row">
+    <div class="col-md-6">
+      <label class="label-texto" for="categoria">Categoría:</label>
+      <select name="categoria" id="categoria">
+        <% categorias.forEach((categoria) => { %>
+          <option value="<%= categoria.category_id %>"><%= categoria.category_name %></option>
+        <% }); %>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label class="label-texto" for="licencia">Licencia:</label>
+            <select name="licencia" id="licencia">
+              <% licencias.forEach((licencia) => { %>
+                <option value="<%= licencia.licence_id %>"><%= licencia.licence_name %></option>
+              <% }); %>
+            </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <label class="label-texto" for="nombre">Nombre del Producto:</label>
+        <input type="text" name="nombre" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <label class="label-texto" for="descripcion">Descripción del Producto:</label>
+        <textarea name="descripcion" rows="4" required></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5">
+      <label class="label-texto" for="sku">SKU:</label>
+        <input type="text" name="sku" required>
+    </div>
+    <div class="col-md-4">
+      <label class="label-texto" for="precio">Precio:</label>
+        <input type="number" name="precio" step="0.01" required>
+    </div>
+    <div class="col-md-3">
+      <label class="label-texto" for="stock">Stock:</label>
+       <input type="number" name="stock" required>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="label-texto" for="descuento">Descuento:</label>
+       <input type="number" name="descuento">
+    </div>
+    <div class="col-md-6">
+
+      <label class="label-texto" for="cuotas">Cuotas:</label>
+        <select name="cuotas">
+            <option value="3">3 cuotas sin interés</option>
+            <option value="6">6 cuotas sin interés</option>
+            <option value="9">9 cuotas sin interés</option>
+            <option value="12">12 cuotas sin interés</option>
+        </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+        <label for="imagenes">Imágenes:</label>
+        <input type="file" name="imagenes" accept="image/*" multiple disabled="">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <button type="submit">Modificar Producto</button>
+    </div>
+  </div>
+
+</form>
+
+
+
+    </div>
+    <div class="col-md-1">
+    </div>
+  </div>
+</div>
+
+</div>
+
+<%- include('../partials/footer.ejs') %>
