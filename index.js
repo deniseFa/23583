@@ -1,11 +1,10 @@
 const express = require('express');
+const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const multer = require('multer');
+const multer = require('multer'); // Agregamos multer para manejar archivos
 const databaseConfig = require('./src/config/database');
-
-const app = express();
 
 // Configuración para servir archivos estáticos desde las carpetas 'public' y 'src/public'
 app.use(express.static(path.join(__dirname, 'public')));
@@ -20,6 +19,7 @@ const storage = multer.diskStorage({
     callback(null, 'public/uploads'); // Ruta donde se guardarán las imágenes
   },
   filename: (req, file, callback) => {
+    // Lógica para asignar nombres a los archivos, si es necesario
     const extension = file.mimetype.split('/')[1];
     const nombreImagen = `${Date.now()}.${extension}`;
     callback(null, nombreImagen);
@@ -37,14 +37,10 @@ app.use(upload.array('imagenes', 5)); // Multer
 app.use(session({
   secret: 'secreto_5112634128dfa',
   resave: true,
-  saveUninitialized: true,
-  cookie: {
-    httpOnly: true,
-    sameSite: 'Lax',
-    secure: true,
-    maxAge: 24 * 60 * 60 * 1000, // 24 horas
-  },
+  saveUninitialized: false,
+  cookie: { secure: true } // Solo enviar cookie sobre HTTPS
 }));
+
 
 // Conexión a la base de datos con mysql2
 const { conn } = require('./src/config/database');
