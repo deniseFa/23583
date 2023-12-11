@@ -8,4 +8,6 @@ const authMiddleware = (req, res, next) => {
   next();
 };
 
+console.log('Inicio del middleware de autenticación');
+
 module.exports = authMiddleware;
