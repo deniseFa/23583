@@ -35,10 +35,18 @@ app.use(upload.array('imagenes', 5)); // Multer para manejar campos de archivos
 
 // Configuración de la sesión
 app.use(session({
-  secret: 'secreto_51126341@21mn_213sd_28dfa',
+  secret: 'secreto_5112634128dfa',
   resave: false,
-  saveUninitialized: false
+  saveUninitialized: false,
+  cookie: {
+    httpOnly: true,
+    domain: '23583.vercel.app',
+    path: '/',
+    sameSite: 'none',
+    secure: true, 
+  }
 }));
+
 
 // Conexión a la base de datos con mysql2
 const { conn } = require('./src/config/database');
