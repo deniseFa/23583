@@ -36,9 +36,15 @@ app.use(upload.array('imagenes', 5)); // Multer
 // Configuración de la sesión
 app.use(session({
   secret: 'secreto_5112634128dfa',
-  resave: false,
+  resave: true, // Cambiado a true
   saveUninitialized: false
 }));
+
+// Agrega el middleware de registro de sesión
+app.use((req, res, next) => {
+  console.log('Sesión:', req.session);
+  next();
+});
 
 // Conexión a la base de datos con mysql2
 const { conn } = require('./src/config/database');
