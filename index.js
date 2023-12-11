@@ -3,6 +3,7 @@ const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const multer = require('multer'); // Agregamos multer para manejar archivos
 const databaseConfig = require('./src/config/database');
 
@@ -33,6 +34,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(upload.array('imagenes', 5)); // Multer 
 
+// Configuración de cookie-parser
+app.use(cookieParser());
+
+// Configuración de la sesión
 app.use(session({
   secret: 'secreto_5112634128dfa',
   resave: false,
@@ -45,6 +50,8 @@ app.use(session({
   },
 }));
 
+
+
 // Conexión a la base de datos con mysql2
 const { conn } = require('./src/config/database');
 
@@ -53,6 +60,8 @@ app.use((req, res, next) => {
   req.mysql = conn;
   next();
 });
+
+
 
 // Rutas de la aplicación
 app.use('/', require('./src/routes/index'));
