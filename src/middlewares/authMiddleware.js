@@ -1,8 +1,10 @@
 // authMiddleware.js
+const { validationResult } = require('express-validator');
+
 const authMiddleware = (req, res, next) => {
-  if (!req.session || !req.session.user) {
-    console.log('Usuario no autenticado. Redirigiendo...');
-    return res.status(401).json({ message: 'Usuario no autenticado' });
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(401).json({ errors: errors.array() });
   }
   console.log('Usuario autenticado:', req.session.user);
   next();
