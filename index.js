@@ -1,11 +1,12 @@
 const express = require('express');
-const app = express();
 const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 const multer = require('multer');
-const cookieParser = require('cookie-parser'); // Agrega cookie-parser
 const databaseConfig = require('./src/config/database');
+
+const app = express();
 
 // Configuración para servir archivos estáticos desde las carpetas 'public' y 'src/public'
 app.use(express.static(path.join(__dirname, 'public')));
@@ -13,6 +14,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Configuración de EJS como motor de plantillas
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'src', 'views'));
+
+// Configuración de cookie-parser
+app.use(cookieParser());
 
 // Configuración de multer para manejar archivos
 const storage = multer.diskStorage({
@@ -27,9 +31,6 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
-
-// Agrega cookie-parser antes del middleware de sesión
-app.use(cookieParser());
 
 // Configuración de body-parser para analizar el cuerpo de las solicitudes
 app.use(express.urlencoded({ extended: true }));
@@ -46,15 +47,15 @@ app.use(session({
     sameSite: 'Lax',
     secure: true,
     maxAge: 24 * 60 * 60 * 1000, // 24 horas
-  },
+  }
 }));
 
-// Configuración de proxy y conexión a la base de datos con mysql2
-app.set('trust proxy', 1); // trust first proxy
+// Conexión a la base de datos con mysql2
+const { conn } = require('./src/config/database');
 
 // Middleware para agregar la conexión a cada solicitud
 app.use((req, res, next) => {
-  req.mysql = databaseConfig.conn;
+  req.mysql = conn;
   next();
 });
 
