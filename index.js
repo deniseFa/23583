@@ -35,9 +35,9 @@ app.use(upload.array('imagenes', 5)); // Multer para manejar campos de archivos
 
 // Configuración de la sesión
 app.use(session({
-  secret: 'secreto_5112634128dfa',
+  secret: 'secreto_51126341@21mn_213sd_28dfa',
   resave: false,
-  saveUninitialized: true
+  saveUninitialized: false
 }));
 
 // Conexión a la base de datos con mysql2
@@ -48,6 +48,7 @@ app.use((req, res, next) => {
   req.mysql = conn;
   next();
 });
+
 
 // Rutas de la aplicación
 app.use('/', require('./src/routes/index'));
