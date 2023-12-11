@@ -36,8 +36,8 @@ app.use(upload.array('imagenes', 5)); // Multer
 // Configuración de la sesión
 app.use(session({
   secret: 'secreto_5112634128dfa',
-  resave: false,
-  saveUninitialized: false,
+  resave: true,
+  saveUninitialized: true,
   cookie: {
     httpOnly: true,
     sameSite: 'Lax',
