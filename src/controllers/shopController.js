@@ -5,11 +5,11 @@ const { conn } = require('../config/database');
 const getProductosFromDB = async () => {
   try {
     const [rows, fields] = await conn.execute(`
-      SELECT p.*, c.category_name
+      SELECT p.*, l.licence_name
       FROM product p
-      JOIN category c ON p.category_id = c.category_id
+      JOIN licence l ON p.licence_id = l.licence_id
     `);
-
+ 
     return rows;
   } catch (error) {
     console.error('Error al ejecutar la consulta:', error.message);
